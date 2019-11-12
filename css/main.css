@@ -1,0 +1,29 @@
+/* Body */
+body {
+    background-color: 	#f1e9d4;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #FF4301;
+    text-align: center;
+    padding: 1%;
+}
+
+/* Tags */
+#tags {
+    text-align: center;
+    padding: 1%;
+}
+
+/* Reddit Pages */
+.redditpage {
+    border: 1px solid #FF4301;
+    margin-right: 33%;
+    margin-left: 33%;
+    padding-left: 5px;
+}
