@@ -7,11 +7,11 @@
 5 - Quotes
 */
 const subreddits = [
-    ["getdisciplined", "lifeimprovement", "timemanagement", "productivity", "zenhabits", "selfimprovement", "simpleliving"],
+    ["getdisciplined", "lifeimprovement", "timemanagement", "productivity", "zenhabits", "simpleliving", "selfimprovement"],
     ["fitness", "yoga"],
     ["personalfinance", "frugal", "eatcheapandhealthy", "financialindependence"],
-    ["meditation", "yoga", "30daysit"],
-    ["getmotivated", "inspiration", "upliftingnews", "selfimprovement", "audiomeditation"],
+    ["30daysit", "meditation", "audiomeditation"],
+    ["getmotivated", "inspiration", "upliftingnews"],
     ["quotes"]
 ];
 
@@ -24,15 +24,34 @@ function tagCheck(buttonClicked) {
             }
         }
     }
+    else if (buttonClicked == "advice") {
+        cycleSubreddits(0);
+    }
+    else if (buttonClicked == "body") {
+        cycleSubreddits(1);
+    }
+    else if (buttonClicked == "finance") {
+        cycleSubreddits(2);
+    }
+    else if (buttonClicked == "mind") {
+        cycleSubreddits(3);
+    }
+    else if (buttonClicked == "positivity") {
+        cycleSubreddits(4);
+    }
     else if (buttonClicked == "quotes") {
-        for (var i = 0; i < subreddits.length; i++) {
-            for (var j = 0; j < subreddits[i].length; j++) {
-                if (i == 5) {
-                    document.getElementById(subreddits[i][j]).style.display = "block";
-                }
-                else {
-                    document.getElementById(subreddits[i][j]).style.display = "none";
-                }
+        cycleSubreddits(5);
+    }
+}
+
+function cycleSubreddits(x) {
+    for (var i = 0; i < subreddits.length; i++) {
+        for (var j = 0; j < subreddits[i].length; j++) {
+            if (i == x) {
+                document.getElementById(subreddits[i][j]).style.display = "block";
+            }
+            else {
+                document.getElementById(subreddits[i][j]).style.display = "none";
             }
         }
     }
